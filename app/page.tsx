@@ -35,10 +35,10 @@ export default function Home() {
             </div>
           </div>
         </nav>
-        <div className="max-w-[743px] mx-auto mt-40 flex flex-col items-center gap-24 text-center">
-          <div className="flex flex-col items-center gap-8 text-center">
+        <div className="max-w-185.75 mx-auto mt-40 flex flex-col items-center gap-32 text-center">
+          <div className="flex flex-col items-center gap-16 text-center">
             <div className="flex flex-col items-center gap-8 text-center">
-              <h1 className="text-7xl font-bold text-center text-white uppercase">
+              <h1 className="text-[80px] font-bold text-center text-white uppercase">
                 Book Your Movie
                 Tickets Now!
               </h1>
