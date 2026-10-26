@@ -1,8 +1,52 @@
-import { LockIcon, SignUpIcon, StarIcon } from "@/components/icons";
-import { ComingSoonCard, MovieCard } from "@/components";
+import { LockIcon, SignUpIcon } from "@/components/icons";
+import { ComingSoonCard, MovieCard, TestimonialCard } from "@/components";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+
+const testimonials = [
+  {
+    quote:
+      "“I messed up the showtime and customer support fixed it in under 5 minutes on chat. Didn’t even lose my loyalty points. Impressed.”",
+    name: "John Doe",
+    role: "Verified Customer",
+    avatarSrc: "https://github.com/herlanderbento.png",
+  },
+  {
+    quote:
+      "“Three taps, ticket bought, QR scanned and done. This is how it should work.”",
+    name: "John Doe",
+    role: "Verified Customer",
+    avatarSrc: "https://github.com/herlanderbento.png",
+  },
+  {
+    quote:
+      "“Booked two IMAX seats in 45 seconds; the live seat map never stuttered and highlighted rows I’d rated before. Nitpick: indie titles lurk under genre filters, an “arthouse” tab would take this from great to flawless.”",
+    name: "John Doe",
+    role: "Verified Customer",
+    avatarSrc: "https://github.com/herlanderbento.png",
+  },
+  {
+    quote:
+      "“The dark mode and minimal pop-ups made late-night browsing painless. Other sites spam me with trailers auto-playing; this one respected my bandwidth.”",
+    name: "John Doe",
+    role: "Verified Customer",
+    avatarSrc: "https://github.com/herlanderbento.png",
+  },
+  {
+    quote:
+      "“Wish list feature is underrated. I tagged three upcoming releases and got opening-night seat drops before they sold out.Chose recliners, prepaid popcorn, barcode flashed and doors opened without fuss.”",
+    name: "John Doe",
+    role: "Verified Customer",
+    avatarSrc: "https://github.com/herlanderbento.png",
+  },
+  {
+    quote: '"Ticketor consistently goes above and beyond my expectations.."',
+    name: "John Doe",
+    role: "Verified Customer",
+    avatarSrc: "https://github.com/herlanderbento.png",
+  },
+];
 
 export default function Home() {
   return (
@@ -247,109 +291,9 @@ export default function Home() {
           </div>
 
           <div className="columns-1 md:columns-2 lg:columns-3 gap-3 mt-20">
-            <div className="bg-neutral-900 rounded-lg p-8 mb-3 break-inside-avoid space-y-8">
-              <div className="space-y-8">
-                <div className="flex items-center gap-1">
-                  {[...Array(5)].map((_, index) => (
-                    <StarIcon key={index} size={20} />
-                  ))}
-                </div>
-                <p>“I messed up the showtime and customer support fixed it in under 5 minutes on chat. Didn’t even lose my loyalty points. Impressed.”</p>
-              </div>
-              <div className="flex items-center gap-4">
-                <Image src="https://github.com/herlanderbento.png" alt="avatar" width={56} height={56} className="rounded-full" />
-                <div>
-                  <h3 className="text-white font-medium">John Doe</h3>
-                  <p className="text-neutral-200">Verified Customer</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-neutral-900 rounded-lg p-8 mb-3 break-inside-avoid space-y-8">
-              <div className="space-y-8">
-                <div className="flex items-center gap-1">
-                  {[...Array(5)].map((_, index) => (
-                    <StarIcon key={index} size={20} />
-                  ))}
-                </div>
-                <p>“Three taps, ticket bought, QR scanned and done. This is how it should work.”</p>
-              </div>
-              <div className="flex items-center gap-4">
-                <Image src="https://github.com/herlanderbento.png" alt="avatar" width={56} height={56} className="rounded-full" />
-                <div>
-                  <h3 className="text-white font-medium">John Doe</h3>
-                  <p className="text-neutral-200">Verified Customer</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-neutral-900 rounded-lg p-8 mb-3 break-inside-avoid space-y-8">
-              <div className="space-y-8">
-                <div className="flex items-center gap-1">
-                  {[...Array(5)].map((_, index) => (
-                    <StarIcon key={index} size={20} />
-                  ))}
-                </div>
-                <p>“Booked two IMAX seats in 45 seconds; the live seat map never stuttered and highlighted rows I’d rated before. Nitpick: indie titles lurk under genre filters, an “arthouse” tab would take this from great to flawless.”</p>
-              </div>
-              <div className="flex items-center gap-4">
-                <Image src="https://github.com/herlanderbento.png" alt="avatar" width={56} height={56} className="rounded-full" />
-                <div>
-                  <h3 className="text-white font-medium">John Doe</h3>
-                  <p className="text-neutral-200">Verified Customer</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-neutral-900 rounded-lg p-8 mb-3 break-inside-avoid space-y-8">
-              <div className="space-y-8">
-                <div className="flex items-center gap-1">
-                  {[...Array(5)].map((_, index) => (
-                    <StarIcon key={index} size={20} />
-                  ))}
-                </div>
-                <p>“The dark mode and minimal pop-ups made late-night browsing painless. Other sites spam me with trailers auto-playing; this one respected my bandwidth.”</p>
-              </div>
-              <div className="flex items-center gap-4">
-                <Image src="https://github.com/herlanderbento.png" alt="avatar" width={56} height={56} className="rounded-full" />
-                <div>
-                  <h3 className="text-white font-medium">John Doe</h3>
-                  <p className="text-neutral-200">Verified Customer</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-neutral-900 rounded-lg p-8 mb-3 break-inside-avoid space-y-8">
-              <div className="space-y-8">
-                <div className="flex items-center gap-1">
-                  {[...Array(5)].map((_, index) => (
-                    <StarIcon key={index} size={20} />
-                  ))}
-                </div>
-                <p>“Wish list feature is underrated. I tagged three upcoming releases and got opening-night seat drops before they sold out.Chose recliners, prepaid popcorn, barcode flashed and doors opened without fuss.”</p>
-              </div>
-              <div className="flex items-center gap-4">
-                <Image src="https://github.com/herlanderbento.png" alt="avatar" width={56} height={56} className="rounded-full" />
-                <div>
-                  <h3 className="text-white font-medium">John Doe</h3>
-                  <p className="text-neutral-200">Verified Customer</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-neutral-900 rounded-lg p-8 mb-3 break-inside-avoid space-y-8">
-              <div className="space-y-8">
-                <div className="flex items-center gap-1">
-                  {[...Array(5)].map((_, index) => (
-                    <StarIcon key={index} size={20} />
-                  ))}
-                </div>
-                <p>"Ticketor consistently goes above and beyond my expectations.."</p>
-              </div>
-              <div className="flex items-center gap-4">
-                <Image src="https://github.com/herlanderbento.png" alt="avatar" width={56} height={56} className="rounded-full" />
-                <div>
-                  <h3 className="text-white font-medium">John Doe</h3>
-                  <p className="text-neutral-200">Verified Customer</p>
-                </div>
-              </div>
-            </div>
+            {testimonials.map((testimonial, index) => (
+              <TestimonialCard key={index} {...testimonial} />
+            ))}
           </div>
         </div>
 
