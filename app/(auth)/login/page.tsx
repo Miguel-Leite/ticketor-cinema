@@ -1,4 +1,4 @@
-import { Input } from "@/components";
+import { Button, Input } from "@/components";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,6 +18,7 @@ export default function Login() {
           <label htmlFor="enail">Password</label>
           <Input type="password" placeholder="Enter your password" containerClassName="bg-neutral-900 border-neutral-800" />
         </div>
+        <Button className="w-full">Sign in</Button>
       </form>
     </div>
   )
