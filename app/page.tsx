@@ -1,5 +1,5 @@
 import { LockIcon, SignUpIcon } from "@/components/icons";
-import { ComingSoonCard, MovieCard, TestimonialCard } from "@/components";
+import { ComingSoonCard, FaqAccordion, MovieCard, TestimonialCard } from "@/components";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -45,6 +45,34 @@ const testimonials = [
     name: "John Doe",
     role: "Verified Customer",
     avatarSrc: "https://github.com/herlanderbento.png",
+  },
+];
+
+const faqs = [
+  {
+    question: "How do I book movie tickets online?",
+    answer:
+      "Choose the movie, cinema and showtime, pick your seats on the live seat map, then complete the payment. Your tickets are sent instantly by email and are also available in your account.",
+  },
+  {
+    question: "Can I cancel or change my booking?",
+    answer:
+      "Yes. You can cancel or change your booking up to 2 hours before the showtime from the “My Bookings” page. Refunds are returned to the original payment method within 5 business days.",
+  },
+  {
+    question: "How do I receive my tickets?",
+    answer:
+      "Tickets are delivered by email as a QR code right after purchase. You can also access them in your account or add them to your digital wallet for faster entry at the cinema.",
+  },
+  {
+    question: "Which payment methods are accepted?",
+    answer:
+      "We accept major credit and debit cards, digital wallets and local payment methods. All transactions are encrypted and processed securely.",
+  },
+  {
+    question: "Do you offer discounts or loyalty rewards?",
+    answer:
+      "Yes. We offer student and matinee discounts, seasonal promotions and a loyalty program where every purchase earns points that can be redeemed for tickets and snacks.",
   },
 ];
 
@@ -301,6 +329,10 @@ export default function Home() {
           <div className="max-w-190.75 w-full mx-auto text-center space-y-4">
             <h2 className="text-[42px] font-bold text-white leading-12 uppercase">Frequently Asked Questions</h2>
             <p className="text-neutral-400 text-xl font-bold capitalize">find answers to their most common questions quickly and easily.</p>
+          </div>
+
+          <div className="max-w-190.75 w-full mx-auto mt-20">
+            <FaqAccordion items={faqs} />
           </div>
         </div>
       </section>
