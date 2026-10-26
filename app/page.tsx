@@ -82,7 +82,7 @@ export default function Home() {
           Learn More</p>
       </main>
       <section className="bg-neutral-950 mt-24 py-5">
-        <div className="container">
+        <div className="container mb-24">
           <div className="flex items-center justify-between gap-4 mb-8">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold">Currently In Cinemas</h2>
@@ -106,6 +106,87 @@ export default function Home() {
                 coverSrc="/covers/cover-01.png"
               />
             ))}
+          </div>
+        </div>
+
+        <div className="container mb-36">
+          <div className="flex items-center justify-between gap-4 mb-8">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold">Top 10 movies this week </h2>
+              <p className="text-neutral-400 text-xl font-bold">Hot this week: top movies and where to watch them.</p>
+            </div>
+            <Link href="#" className="flex items-center gap-2 font-bold text-white">
+              View All
+              <ArrowRight size={24} />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-6 gap-2">
+            {[...Array(6)].map((_, index) => (
+              <MovieCard
+                key={index}
+                title="Revoir Paris"
+                genre="Drama"
+                rating={8.5}
+                duration="1h 45m"
+                ageRating="R"
+                coverSrc="/covers/cover-01.png"
+              />
+            ))}
+          </div>
+        </div>
+
+        <div className="container space-y-8">
+          <div className="max-w-190.75 w-full mx-auto text-center space-y-4">
+            <h2 className="text-[42px] font-bold text-white leading-12">Now Showing with Festivals, Screenings and Special Offers</h2>
+            <p className="text-neutral-400 text-xl font-bold">Unique film events and limited-time offers — don’t miss what’s coming next.</p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="max-h-90.75 relative overflow-hidden rounded-2xl">
+              <div className="absolute inset-0 bg-linear-to-b from-transparent to-black/80 z-10 flex items-end justify-center p-6">
+                <div className="w-full h-full flex flex-col justify-between gap-5 p-8">
+                  <div>
+                    <span className="text-xs text-black font-semibold bg-primary py-2 px-3 rounded-lg inline-block">Special Event</span>
+                  </div>
+                  <div className="flex items-end justify-between">
+                    <div className="space-y-4 flex-1">
+                      <h3 className="text-neutral-100 text-5xl font-extrabold">Horror Film Festival</h3>
+                      <p className="text-xl text-neutral-600">Spine-chilling classics</p>
+                    </div>
+                    <div className="flex-1 flex items-center justify-end">
+                      <button className="flex items-center font-bold gap-2 px-4 py-3 rounded bg-primary text-background">
+                        Learn More
+                        <ArrowRight size={24} />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <Image src="/movies/movie-01.jpg" alt="cover" width={608} height={363} className="rounded object-contain w-full" />
+            </div>
+            <div className="max-h-90.75 relative overflow-hidden rounded-2xl">
+              <div className="absolute inset-0 bg-linear-to-b from-transparent to-black/80 z-10 flex items-end justify-center p-6">
+                <div className="w-full h-full flex flex-col justify-between gap-5 p-8">
+                  <div>
+                    <span className="text-xs text-black font-semibold bg-primary py-2 px-3 rounded-lg inline-block">Limit Time</span>
+                  </div>
+                  <div className="flex items-end justify-between">
+                    <div className="space-y-4 flex-1">
+                      <h3 className="text-neutral-100 text-5xl font-extrabold">Student Discount</h3>
+                      <p className="text-xl text-neutral-600 capitalize"><span className="text-cyan-600">50% off</span> all weekday matinee show</p>
+                    </div>
+                    <div className="flex-1 flex items-center justify-end">
+                      <button className="flex items-center font-bold gap-2 px-4 py-3 rounded bg-primary text-background">
+                        Learn More
+                        <ArrowRight size={24} />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <Image src="/movies/movie-02.jpg" alt="cover" width={608} height={363} className="rounded object-contain w-full" />
+            </div>
           </div>
         </div>
       </section>
