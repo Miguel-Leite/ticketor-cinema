@@ -6,7 +6,9 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="flex-1">
-      <header className="bg-[url('/bg.png')] bg-cover bg-center h-screen w-screen pt-6">
+      <header className="relative isolate bg-[url('/bg.png')] bg-cover bg-center h-screen w-screen pt-6">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-linear-to-b from-transparent via-transparent to-background" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-40 bg-linear-to-b from-black/50 to-transparent" />
         <nav className="container flex items-center">
           <div className="rounded-xl bg-background py-3.5 px-20 flex-1">
             <div className="flex items-center gap-16">
