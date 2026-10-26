@@ -1,3 +1,6 @@
 export * from './lock-icon'
 export * from './sign-up-icon'
 export * from './star-icon'
+export * from './linkedin-icon'
+export * from './twitter-icon'
+export * from './instagram-icon'

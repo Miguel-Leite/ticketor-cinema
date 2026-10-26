@@ -1,4 +1,4 @@
-import { LockIcon, SignUpIcon } from "@/components/icons";
+import { InstagramIcon, LinkedInIcon, LockIcon, SignUpIcon, TwitterIcon } from "@/components/icons";
 import { ComingSoonCard, FaqAccordion, MovieCard, TestimonialCard } from "@/components";
 import { ArrowRight, Mail } from "lucide-react";
 import Image from "next/image";
@@ -78,7 +78,7 @@ const faqs = [
 
 export default function Home() {
   return (
-    <main className="flex-1">
+    <main className="min-h-screen bg-neutral-950">
       <header className="relative isolate bg-[url('/bg.png')] bg-cover bg-center h-screen w-screen pt-6">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-hero" />
         <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-40 bg-linear-to-b from-black/50 to-transparent" />
@@ -149,10 +149,10 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <main className="w-full p-6 text-center bg-linear-to-r from-[#0E0E11] via-[#292929] to-[#0E0E11] to-100%">
+      <div className="w-full p-6 text-center bg-linear-to-r from-[#0E0E11] via-[#292929] to-[#0E0E11] to-100%">
         <p className="text-xl font-bold">Special Offer: Buy 2 tickets, get 1 FREE! Valid this weekend only.
           Learn More</p>
-      </main>
+      </div>
       <section className="bg-neutral-950 mt-24 py-5">
         <div className="container mb-24">
           <div className="flex items-center justify-between gap-4 mb-8">
@@ -369,6 +369,66 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <footer className="mt-40">
+        <div className="container">
+          <div className="grid grid-cols-8 gap-16">
+            <div className="col-span-4">
+              <div className="max-w-116 w-full space-y-8 mb-10">
+                <div className="flex flex-col items-start gap-8">
+                  <Link href="/"><Image src="/logo.png" alt="logo" width={158} height={22} /></Link>
+                  <p className="text-sm text-neutral-500">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an </p>
+                </div>
+                <div className="space-y-8">
+                  <div className="flex items-center gap-4">
+                    <Link href="#"><InstagramIcon /></Link>
+                    <Link href="#"><TwitterIcon /></Link>
+                    <Link href="#"><LinkedInIcon /></Link>
+                  </div>
+                  <div className="grid grid-cols-2 gap-10 text-neutral-500 text-xs">
+                    <div>
+                      <p>Copyright © 2016 - 2025 Ticketor.
+                        All right reserved. </p>
+                    </div>
+                    <div>
+                      <p>Privacy Policy     Terms of service </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-8">
+              <h3 className="font-medium text-neutral-100">Find a Movie</h3>
+              <ul className="flex flex-col gap-2 mt-4 text-neutral-500 text-sm">
+                <li><Link href="#">In Theaters</Link></li>
+                <li><Link href="#">Top Movies</Link></li>
+                <li><Link href="#">Coming Soon</Link></li>
+              </ul>
+            </div>
+
+            <div className="space-y-8">
+              <h3 className="font-medium text-neutral-100">Company</h3>
+              <ul className="flex flex-col gap-2 mt-4 text-neutral-500 text-sm">
+                <li><Link href="#">About Us</Link></li>
+                <li><Link href="#">Partnerships</Link></li>
+                <li><Link href="#">Get the App</Link></li>
+              </ul>
+            </div>
+
+            <div className="space-y-8">
+              <h3 className="font-medium text-neutral-100">Help</h3>
+              <ul className="flex flex-col gap-2 mt-4 text-neutral-500 text-sm">
+                <li><Link href="#">Contact Us</Link></li>
+                <li><Link href="#">Subscription</Link></li>
+                <li><Link href="#">FAQs</Link></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="w-full h-87.5 overflow-hidden">
+          <img src="/bg-footer.png" alt="footer" className="w-full object-contain" />
+        </div>
+      </footer>
     </main>
   );
 }
