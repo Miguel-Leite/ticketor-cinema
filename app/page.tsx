@@ -1,5 +1,5 @@
 import { LockIcon, SignUpIcon } from "@/components/icons";
-import { ComingSoonCard, FaqAccordion, Footer, MovieCard, TestimonialCard } from "@/components";
+import { Button, ButtonLink, ComingSoonCard, FaqAccordion, Footer, Input, MovieCard, TestimonialCard } from "@/components";
 import { ArrowRight, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -120,13 +120,13 @@ export default function Home() {
               <p className="text-xl">Watch the latest movies at your favorite cinemas</p>
             </div>
             <div className="flex items-center justify-center text-center">
-              <Link href="#" className="flex items-center font-bold gap-2 px-8 py-3 rounded bg-primary text-background border border-transparent">
+              <ButtonLink href="#" variant="primary">
                 Explore Movies
                 <ArrowRight size={24} />
-              </Link>
-              <Link href="#" className="flex items-center font-bold gap-2 px-8 py-3 rounded bg-transparent text-white border border-transparent">
+              </ButtonLink>
+              <ButtonLink href="#" variant="ghost">
                 Find Cinema
-              </Link>
+              </ButtonLink>
             </div>
           </div>
 
@@ -227,10 +227,10 @@ export default function Home() {
                       <p className="text-xl text-neutral-600">Spine-chilling classics</p>
                     </div>
                     <div className="flex-1 flex items-center justify-end">
-                      <button className="flex items-center font-bold gap-2 px-8 py-3 rounded bg-primary text-background border border-transparent">
+                      <Button variant="primary">
                         Learn More
                         <ArrowRight size={24} />
-                      </button>
+                      </Button>
                     </div>
                   </div>
                 </div>
@@ -249,10 +249,10 @@ export default function Home() {
                       <p className="text-xl text-neutral-600 capitalize"><span className="text-cyan-600">50% off</span> all weekday matinee show</p>
                     </div>
                     <div className="flex-1 flex items-center justify-end">
-                      <button className="flex items-center font-bold gap-2 px-8 py-3 rounded bg-primary text-background border border-transparent">
+                      <Button variant="primary">
                         Learn More
                         <ArrowRight size={24} />
-                      </button>
+                      </Button>
                     </div>
                   </div>
                 </div>
@@ -300,12 +300,12 @@ export default function Home() {
                   <p className="text-neutral-200 text-xl">Get a sneak peek at the most popular current movie trailers and be the first to know about the hottest upcoming releases</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <button className="flex items-center font-bold gap-2 px-8 py-3 rounded bg-primary text-background border border-transparent">
+                  <Button variant="primary">
                     Book Movie Ticket
-                  </button>
-                  <button className="flex items-center font-bold gap-2 px-8 py-3 rounded bg-transparent text-primary border border-primary">
+                  </Button>
+                  <Button variant="outline">
                     Learn More
-                  </button>
+                  </Button>
                 </div>
               </div>
             </div>
@@ -341,9 +341,9 @@ export default function Home() {
             <h2 className="text-[42px] font-bold text-white leading-12">Still have a question?</h2>
             <p className="text-neutral-400 text-xl font-bold">Please contact us</p>
           </div>
-          <Link href="#" className="inline-flex items-center font-bold gap-2 px-8 py-3 rounded bg-primary text-background border border-transparent">
+          <ButtonLink href="#" variant="primary">
             Contact US
-          </Link>
+          </ButtonLink>
         </div>
 
         <div className="container mt-40">
@@ -354,13 +354,15 @@ export default function Home() {
             </div>
             <div className="space-y-2">
               <div className="flex items-center gap-4">
-                <div className="flex items-center px-3 rounded border border-neutral-700 flex-1">
-                  <Mail size={16} className="text-neutral-400" />
-                  <input type="email" placeholder="Enter your email" className="p-3 outline-none bg-transparent placeholder:text-neutral-500 text-neutral-200" />
-                </div>
-                <button className="inline-flex items-center font-bold gap-2 px-8 py-3 rounded bg-primary text-background border border-transparent">
+                <Input
+                  type="email"
+                  placeholder="Enter your email"
+                  containerClassName="flex-1"
+                  icon={<Mail size={16} className="text-neutral-400" />}
+                />
+                <Button variant="primary">
                   Sign Up
-                </button>
+                </Button>
               </div>
               <div className="max-w-140">
                 <p className="text-neutral-700">By clicking Sign Up you&apos;re confirming that you agree with our Terms and Conditions.</p>
