@@ -3,5 +3,10 @@ export default function AuthLayout({
 }: {
   children: React.ReactNode
 }) {
-  return <main className="min-h-screen w-full">{children}</main>
+  return <main className="min-h-screen w-full grid grid-cols-2 gap-4">
+    <div>
+      {children}
+    </div>
+    <div className="bg-[url('/bg-auth.png')] bgcov w-full h-screen" />
+  </main>
 }
