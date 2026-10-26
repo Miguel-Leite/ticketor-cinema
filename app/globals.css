@@ -2,15 +2,27 @@
 
 :root {
   --background: #010108;
+  --background-elevated: #0e0e11;
   --foreground: #f5f5f5;
   --primary: #fcfc65;
+  --gradient-dark: linear-gradient(180deg, var(--background-elevated) 0%, var(--background) 100%);
+  --gradient-hero: linear-gradient(180deg, transparent 0%, transparent 45%, var(--background-elevated) 75%, var(--background) 100%);
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-elevated: var(--background-elevated);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --font-sans: var(--font-manrope);
+}
+
+@utility bg-gradient-dark {
+  background-image: var(--gradient-dark);
+}
+
+@utility bg-gradient-hero {
+  background-image: var(--gradient-hero);
 }
 
 @utility container {
