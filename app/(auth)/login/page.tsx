@@ -14,9 +14,14 @@ export default function Login() {
           <label htmlFor="enail">E-mail</label>
           <Input placeholder="name@example.com" containerClassName="bg-neutral-900 border-neutral-800" />
         </div>
-        <div className="flex flex-col gap-3">
-          <label htmlFor="enail">Password</label>
-          <Input type="password" placeholder="Enter your password" containerClassName="bg-neutral-900 border-neutral-800" />
+        <div>
+          <div className="flex flex-col gap-3">
+            <label htmlFor="enail">Password</label>
+            <Input type="password" placeholder="Enter your password" containerClassName="bg-neutral-900 border-neutral-800" />
+          </div>
+          <div className="text-end space-x-1.5 text-xs">
+            <Link href="#" className="text-primary">Forgot your password?</Link>
+          </div>
         </div>
         <Button className="w-full">Sign in</Button>
       </form>
