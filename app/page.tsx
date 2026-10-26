@@ -1,4 +1,4 @@
-import { LockIcon, SignUpIcon } from "@/components/icons";
+import { LockIcon, SignUpIcon, StarIcon } from "@/components/icons";
 import { ArrowRight, HistoryIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -105,7 +105,8 @@ export default function Home() {
                       <h3 className="font-bold text-white text-base">Revoir Paris</h3>
                       <p className="text-neutral-400 text-xs">Drama</p>
                     </div>
-                    <div>
+                    <div className="flex items-center gap-1.5">
+                      <StarIcon className="text-yellow-400" />
                       <p className="font-bold text-white text-xs">8.5</p>
                     </div>
                   </div>
