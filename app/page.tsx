@@ -35,7 +35,7 @@ export default function Home() {
             </div>
           </div>
         </nav>
-        <div className="max-w-185.75 mx-auto mt-40 flex flex-col items-center gap-32 text-center">
+        <div className="max-w-185.75 w-full mx-auto mt-40 flex flex-col items-center gap-32 text-center">
           <div className="flex flex-col items-center gap-16 text-center">
             <div className="flex flex-col items-center gap-8 text-center">
               <h1 className="text-[80px] font-bold text-center text-white uppercase">
@@ -55,7 +55,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex items-center gap-14">
+          <div className="w-full flex items-center justify-between">
             <div className="space-y-4">
               <strong className="text-4xl font-bold">500 +</strong>
               <p className="text-xl">Movies Available</p>
