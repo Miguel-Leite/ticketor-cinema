@@ -1,4 +1,4 @@
-import { LockIcon, SignUpIcon } from "@/components/icons";
+import { LockIcon, SignUpIcon, StarIcon } from "@/components/icons";
 import { ComingSoonCard, MovieCard } from "@/components";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -39,7 +39,7 @@ export default function Home() {
           </div>
         </nav>
         <div className="max-w-185.75 w-full mx-auto mt-40 flex flex-col items-center gap-32 text-center">
-          <div className="flex flex-col items-center gap-16 text-center">
+          <div className="flex flex-col items-center gap-16 text-center">s
             <div className="flex flex-col items-center gap-8 text-center">
               <h1 className="text-[80px] font-bold text-center text-white uppercase">
                 Book Your Movie
@@ -48,11 +48,11 @@ export default function Home() {
               <p className="text-xl">Watch the latest movies at your favorite cinemas</p>
             </div>
             <div className="flex items-center justify-center text-center">
-              <Link href="#" className="flex items-center font-bold gap-2 px-4 py-3 rounded bg-primary text-background">
+              <Link href="#" className="flex items-center font-bold gap-2 px-8 py-3 rounded bg-primary text-background border border-transparent">
                 Explore Movies
                 <ArrowRight size={24} />
               </Link>
-              <Link href="#" className="flex items-center font-bold gap-2 px-4 py-3 rounded text-white">
+              <Link href="#" className="flex items-center font-bold gap-2 px-8 py-3 rounded bg-transparent text-white border border-transparent">
                 Find Cinema
               </Link>
             </div>
@@ -138,8 +138,8 @@ export default function Home() {
 
         <div className="container space-y-8">
           <div className="max-w-190.75 w-full mx-auto text-center space-y-4">
-            <h2 className="text-[42px] font-bold text-white leading-12">Now Showing with Festivals, Screenings and Special Offers</h2>
-            <p className="text-neutral-400 text-xl font-bold">Unique film events and limited-time offers — don’t miss what’s coming next.</p>
+            <h2 className="text-[42px] font-bold text-white leading-12 uppercase">Now Showing with Festivals, Screenings and Special Offers</h2>
+            <p className="text-neutral-400 text-xl font-bold capitalize">Unique film events and limited-time offers — don’t miss what’s coming next.</p>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
@@ -155,7 +155,7 @@ export default function Home() {
                       <p className="text-xl text-neutral-600">Spine-chilling classics</p>
                     </div>
                     <div className="flex-1 flex items-center justify-end">
-                      <button className="flex items-center font-bold gap-2 px-4 py-3 rounded bg-primary text-background">
+                      <button className="flex items-center font-bold gap-2 px-8 py-3 rounded bg-primary text-background border border-transparent">
                         Learn More
                         <ArrowRight size={24} />
                       </button>
@@ -177,7 +177,7 @@ export default function Home() {
                       <p className="text-xl text-neutral-600 capitalize"><span className="text-cyan-600">50% off</span> all weekday matinee show</p>
                     </div>
                     <div className="flex-1 flex items-center justify-end">
-                      <button className="flex items-center font-bold gap-2 px-4 py-3 rounded bg-primary text-background">
+                      <button className="flex items-center font-bold gap-2 px-8 py-3 rounded bg-primary text-background border border-transparent">
                         Learn More
                         <ArrowRight size={24} />
                       </button>
@@ -213,6 +213,150 @@ export default function Home() {
                 coverSrc="/covers/cover-02.png"
               />
             ))}
+          </div>
+        </div>
+
+        <div className="container mt-40">
+          <div className="grid grid-cols-2 bg-[#141418] rounded-2xl overflow-hidden">
+            <div className="overflow-hidden">
+              <Image src="/cinema.png" alt="cinema" width={654} height={503} className="rounded object-contain w-full" />
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <div className="max-w-118 w-full space-y-20">
+                <div className="space-y-4">
+                  <h2 className="text-3xl font-bold text-white">Book tickets to your favorite movies Online</h2>
+                  <p className="text-neutral-200 text-xl">Get a sneak peek at the most popular current movie trailers and be the first to know about the hottest upcoming releases</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <button className="flex items-center font-bold gap-2 px-8 py-3 rounded bg-primary text-background border border-transparent">
+                    Book Movie Ticket
+                  </button>
+                  <button className="flex items-center font-bold gap-2 px-8 py-3 rounded bg-transparent text-primary border border-primary">
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="container mt-40">
+          <div className="max-w-190.75 w-full mx-auto text-center space-y-4">
+            <h2 className="text-[42px] font-bold text-white leading-12 uppercase">Happy Customers</h2>
+            <p className="text-neutral-400 text-xl font-bold capitalize">Hear what our satisfied moviegoers have to say</p>
+          </div>
+
+          <div className="columns-1 md:columns-2 lg:columns-3 gap-3 mt-20">
+            <div className="bg-neutral-900 rounded-lg p-8 mb-3 break-inside-avoid space-y-8">
+              <div className="space-y-8">
+                <div className="flex items-center gap-1">
+                  {[...Array(5)].map((_, index) => (
+                    <StarIcon key={index} size={20} />
+                  ))}
+                </div>
+                <p>“I messed up the showtime and customer support fixed it in under 5 minutes on chat. Didn’t even lose my loyalty points. Impressed.”</p>
+              </div>
+              <div className="flex items-center gap-4">
+                <Image src="https://github.com/herlanderbento.png" alt="avatar" width={56} height={56} className="rounded-full" />
+                <div>
+                  <h3 className="text-white font-medium">John Doe</h3>
+                  <p className="text-neutral-200">Verified Customer</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-neutral-900 rounded-lg p-8 mb-3 break-inside-avoid space-y-8">
+              <div className="space-y-8">
+                <div className="flex items-center gap-1">
+                  {[...Array(5)].map((_, index) => (
+                    <StarIcon key={index} size={20} />
+                  ))}
+                </div>
+                <p>“Three taps, ticket bought, QR scanned and done. This is how it should work.”</p>
+              </div>
+              <div className="flex items-center gap-4">
+                <Image src="https://github.com/herlanderbento.png" alt="avatar" width={56} height={56} className="rounded-full" />
+                <div>
+                  <h3 className="text-white font-medium">John Doe</h3>
+                  <p className="text-neutral-200">Verified Customer</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-neutral-900 rounded-lg p-8 mb-3 break-inside-avoid space-y-8">
+              <div className="space-y-8">
+                <div className="flex items-center gap-1">
+                  {[...Array(5)].map((_, index) => (
+                    <StarIcon key={index} size={20} />
+                  ))}
+                </div>
+                <p>“Booked two IMAX seats in 45 seconds; the live seat map never stuttered and highlighted rows I’d rated before. Nitpick: indie titles lurk under genre filters, an “arthouse” tab would take this from great to flawless.”</p>
+              </div>
+              <div className="flex items-center gap-4">
+                <Image src="https://github.com/herlanderbento.png" alt="avatar" width={56} height={56} className="rounded-full" />
+                <div>
+                  <h3 className="text-white font-medium">John Doe</h3>
+                  <p className="text-neutral-200">Verified Customer</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-neutral-900 rounded-lg p-8 mb-3 break-inside-avoid space-y-8">
+              <div className="space-y-8">
+                <div className="flex items-center gap-1">
+                  {[...Array(5)].map((_, index) => (
+                    <StarIcon key={index} size={20} />
+                  ))}
+                </div>
+                <p>“The dark mode and minimal pop-ups made late-night browsing painless. Other sites spam me with trailers auto-playing; this one respected my bandwidth.”</p>
+              </div>
+              <div className="flex items-center gap-4">
+                <Image src="https://github.com/herlanderbento.png" alt="avatar" width={56} height={56} className="rounded-full" />
+                <div>
+                  <h3 className="text-white font-medium">John Doe</h3>
+                  <p className="text-neutral-200">Verified Customer</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-neutral-900 rounded-lg p-8 mb-3 break-inside-avoid space-y-8">
+              <div className="space-y-8">
+                <div className="flex items-center gap-1">
+                  {[...Array(5)].map((_, index) => (
+                    <StarIcon key={index} size={20} />
+                  ))}
+                </div>
+                <p>“Wish list feature is underrated. I tagged three upcoming releases and got opening-night seat drops before they sold out.Chose recliners, prepaid popcorn, barcode flashed and doors opened without fuss.”</p>
+              </div>
+              <div className="flex items-center gap-4">
+                <Image src="https://github.com/herlanderbento.png" alt="avatar" width={56} height={56} className="rounded-full" />
+                <div>
+                  <h3 className="text-white font-medium">John Doe</h3>
+                  <p className="text-neutral-200">Verified Customer</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-neutral-900 rounded-lg p-8 mb-3 break-inside-avoid space-y-8">
+              <div className="space-y-8">
+                <div className="flex items-center gap-1">
+                  {[...Array(5)].map((_, index) => (
+                    <StarIcon key={index} size={20} />
+                  ))}
+                </div>
+                <p>"Ticketor consistently goes above and beyond my expectations.."</p>
+              </div>
+              <div className="flex items-center gap-4">
+                <Image src="https://github.com/herlanderbento.png" alt="avatar" width={56} height={56} className="rounded-full" />
+                <div>
+                  <h3 className="text-white font-medium">John Doe</h3>
+                  <p className="text-neutral-200">Verified Customer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="container mt-40">
+          <div className="max-w-190.75 w-full mx-auto text-center space-y-4">
+            <h2 className="text-[42px] font-bold text-white leading-12 uppercase">Frequently Asked Questions</h2>
+            <p className="text-neutral-400 text-xl font-bold capitalize">find answers to their most common questions quickly and easily.</p>
           </div>
         </div>
       </section>
