@@ -1,5 +1,6 @@
-import { LockIcon, SignUpIcon, StarIcon } from "@/components/icons";
-import { ArrowRight, HistoryIcon } from "lucide-react";
+import { LockIcon, SignUpIcon } from "@/components/icons";
+import { MovieCard } from "@/components";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -95,32 +96,15 @@ export default function Home() {
 
           <div className="grid grid-cols-6 gap-2">
             {[...Array(6)].map((_, index) => (
-              <div key={index} className="rounded border border-neutral-800">
-                <div className="relative overflow-hidden w-full max-h-79 p-1">
-                  <Image src="/covers/cover-01.png" alt="movie" width={217} height={310} className="rounded object-cover" />
-                </div>
-                <div className="px-3 py-2.5 space-y-2">
-                  <div className="flex items-center justify-between gap-2">
-                    <div className="space-y-1">
-                      <h3 className="font-bold text-white text-base">Revoir Paris</h3>
-                      <p className="text-neutral-400 text-xs">Drama</p>
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <StarIcon className="text-yellow-400" />
-                      <p className="font-bold text-white text-xs">8.5</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between gap-2">
-                    <div className="flex items-center gap-1.5">
-                      <HistoryIcon size={14} className="text-neutral-400" />
-                      <p className="text-white text-xs">1h 45m</p>
-                    </div>
-                    <div className="bg-neutral-400 rounded w-9 h-4 flex items-center justify-center text-center">
-                      <p className="text-black text-xs">R</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <MovieCard
+                key={index}
+                title="Revoir Paris"
+                genre="Drama"
+                rating={8.5}
+                duration="1h 45m"
+                ageRating="R"
+                coverSrc="/covers/cover-01.png"
+              />
             ))}
           </div>
         </div>
