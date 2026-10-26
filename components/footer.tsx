@@ -60,8 +60,8 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="relative w-full h-87.5 overflow-hidden">
-        <Image src="/bg-footer.png" alt="footer" fill className="object-contain" />
+      <div className="relative w-full h-87.5 overflow-hidden bg-red-500">
+        <Image src="/bg-footer.png" alt="footer" width={1440} height={351} className="object-contain w-full" />
       </div>
     </footer>
   );
