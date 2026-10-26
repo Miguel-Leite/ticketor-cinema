@@ -1,6 +1,6 @@
 import { LockIcon, SignUpIcon } from "@/components/icons";
 import { ComingSoonCard, FaqAccordion, MovieCard, TestimonialCard } from "@/components";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -333,6 +333,39 @@ export default function Home() {
 
           <div className="max-w-190.75 w-full mx-auto mt-20">
             <FaqAccordion items={faqs} />
+          </div>
+        </div>
+
+        <div className="container mt-12 text-center space-y-6">
+          <div className="max-w-190.75 w-full mx-auto text-center space-y-4">
+            <h2 className="text-[42px] font-bold text-white leading-12">Still have a question?</h2>
+            <p className="text-neutral-400 text-xl font-bold">Please contact us</p>
+          </div>
+          <Link href="#" className="inline-flex items-center font-bold gap-2 px-8 py-3 rounded bg-primary text-background border border-transparent">
+            Contact US
+          </Link>
+        </div>
+
+        <div className="container mt-40">
+          <div className="max-w-160 w-full mx-auto space-y-16">
+            <div className="text-center space-y-4">
+              <h2 className="text-[42px] font-bold text-white leading-12">Ready to watch & Book Movies? </h2>
+              <p className="text-neutral-400 text-xl font-bold">Subscribe to our newsletter. Enter your email to create or restart your membership.</p>
+            </div>
+            <div className="space-y-2">
+              <div className="flex items-center gap-4">
+                <div className="flex items-center px-3 rounded border border-neutral-700 flex-1">
+                  <Mail size={16} className="text-neutral-400" />
+                  <input type="email" placeholder="Enter your email" className="p-3 outline-none bg-transparent placeholder:text-neutral-500 text-neutral-200" />
+                </div>
+                <button className="inline-flex items-center font-bold gap-2 px-8 py-3 rounded bg-primary text-background border border-transparent">
+                  Sign Up
+                </button>
+              </div>
+              <div className="max-w-140">
+                <p className="text-neutral-700">By clicking Sign Up you're confirming that you agree with our Terms and Conditions.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
