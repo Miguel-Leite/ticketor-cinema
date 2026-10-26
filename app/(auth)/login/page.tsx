@@ -9,7 +9,7 @@ export default function Login() {
         <Link href="/"><Image src="/logo.png" alt="logo" width={158} height={22} /></Link>
         <h1 className="text-3xl font-bold text-white capitalize">Sign in</h1>
       </div>
-      <form>
+      <form className="space-y-4">
         <div className="flex flex-col gap-3">
           <label htmlFor="enail">E-mail</label>
           <Input placeholder="name@example.com" containerClassName="bg-neutral-900 border-neutral-800" />
